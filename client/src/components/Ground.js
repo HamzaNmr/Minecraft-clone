@@ -1,6 +1,6 @@
 import { usePlane } from '@react-three/cannon';
 import { RepeatWrapping, NearestFilter } from 'three';
-import { dirtTexture } from '../images/texture';
+import { grassTexture } from '../images/texture';
 
 export const Ground = () => {
     const [ref] = usePlane(() => ({
@@ -8,15 +8,15 @@ export const Ground = () => {
         position: [0, 0, 0]
     }))
 
-    dirtTexture.magFilter = NearestFilter;
-    dirtTexture.wrapS = RepeatWrapping;
-    dirtTexture.wrapT = RepeatWrapping;
-    dirtTexture.repeat.set(50, 50);
+    grassTexture.magFilter = NearestFilter;
+    grassTexture.wrapS = RepeatWrapping;
+    grassTexture.wrapT = RepeatWrapping;
+    grassTexture.repeat.set(100, 100);
 
     return (
         <mesh ref={ref}>
-            <planeGeometry attach="geometry" args={[100, 100]} />
-            <meshStandardMaterial attach="material" map={dirtTexture} />
+            <planeGeometry attach="geometry" args={[200, 200]} />
+            <meshStandardMaterial attach="material" map={grassTexture} />
         </mesh>
     )    
 }

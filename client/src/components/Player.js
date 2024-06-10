@@ -4,6 +4,8 @@ import { Vector3 } from 'three';
 import { useEffect, useRef } from 'react';
 import { useKeyboard } from '../hooks/useKeyboard';
 
+import { useGLTF, useAnimations } from '@react-three/drei'
+
 
 export const Player = () => {
     const { moveForward, moveBackward, moveLeft, moveRight, jump} = useKeyboard();
@@ -62,8 +64,9 @@ export const Player = () => {
 
     return (
         <mesh ref={ref}>
-            
         </mesh>
     )
 
 }
+
+useGLTF.preload('/player.glb')

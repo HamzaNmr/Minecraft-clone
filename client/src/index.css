@@ -1,3 +1,6 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap'); */
+
 * {
   box-sizing: border-box;
 }
@@ -20,11 +23,13 @@ body,
 }
 
 body {
-  position: fixed;
-  overflow: hidden;
-  overscroll-behavior-y: none;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-  font-size: 40px;
+  
+  /* font-family: 'Kolker Brush', cursive; */
+}
+
+.canvas-container {
+  width: 100vw;
+  height: 100vh;
 }
 
 .flex {
@@ -47,4 +52,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.cursor {
+  font-size: 5rem;
+  font-weight: bold;
+  color: gray;
 }
